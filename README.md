@@ -1,14 +1,42 @@
-# Welcome to your CDK TypeScript project
+# slash-payments-minimum-merchant-api
 
-This is a blank project for CDK development with TypeScript.
+For more information on the uses of this tool, see
+https://slash-fi.gitbook.io/docs/integration-guide/quick-start
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## API Architecture
 
-## Useful commands
+API Gateway \* 1 -> Lambda \* 3
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Deploy APIs
+
+Please make sure you have an environment where aws cdk can run and execute the following command
+
+```
+$ npm i
+$ cdk bootstrap aws://[AccountId]/[RegionId]
+$ cdk deploy
+```
+
+## Settings
+
+- Check the generated url from the AWS CloudFormation console
+- Enter the following values in each field of Slash.fi's merchant management app -> Settings -> Payment Setting and save
+  - URL to receive Payment Result kickback from Slash Payment
+    - /kickback
+  - Payment success return URL
+    - /success
+  - Payment failure return URL
+    - /failure
+- Requests are output to CloudWatch Logs as Lambda logs
+
+## Generate Payment URL
+
+```
+$ npx scripts/ts-node generate-payment-url.ts --help
+```
+
+## Clean up
+
+```
+$ cdk destroy
+```
