@@ -38,7 +38,7 @@ $ cdk deploy
 ## Generate Payment URL
 
 ```
-$ npx scripts/ts-node generate-payment-url.ts --help
+$ npx ts-node scripts/generate-payment-url.ts --help
 ```
 
 ## Clean up
