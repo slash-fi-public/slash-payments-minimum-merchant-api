@@ -1,4 +1,4 @@
-# SlashPayments Minimum Merchant APIs AWS CDK Template
+# AWS CDK for SlashPayments Minimum Merchant APIs 
 
 For more information on the uses of this tool, see
 https://slash-fi.gitbook.io/docs/integration-guide/quick-start
