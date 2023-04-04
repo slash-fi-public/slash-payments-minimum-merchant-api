@@ -44,5 +44,5 @@ $ npx ts-node scripts/generate-payment-url.ts --help
 ## Clean up
 
 ```
-$ cdk destroy
+$ npx cdk destroy
 ```
