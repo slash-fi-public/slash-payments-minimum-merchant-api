@@ -13,8 +13,8 @@ Please make sure you have an environment where aws cdk can run and execute the f
 
 ```
 $ npm i
-$ cdk bootstrap aws://[AccountId]/[RegionId]
-$ cdk deploy
+$ npx cdk bootstrap aws://[AccountId]/[RegionId]
+$ npx cdk deploy
 ```
 
 ## Settings
